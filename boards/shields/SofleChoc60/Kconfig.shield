@@ -1,0 +1,2 @@
+config SHIELD_SofleChoc60_DONGLE
+    def_bool $(shields_list_contains,SofleChoc60_dongle)
