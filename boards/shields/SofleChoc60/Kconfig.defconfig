@@ -1,8 +1,8 @@
-if SHIELD_SofleChoc60_DONGLE
+if SHIELD_sofle_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
-    default "SofleChoc60"
+    default "sofle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
