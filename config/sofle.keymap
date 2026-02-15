@@ -62,6 +62,128 @@
         };
     };
 
+    macros {
+        hd2gd: hd2gd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp DOWN &kp UP_ARROW &kp LEFT &kp UP_ARROW &kp RIGHT &kp RIGHT>;
+
+            label = "HD2GD";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2ol: hd2ol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT &kp DOWN &kp UP_ARROW &kp RIGHT &kp DOWN>;
+
+            label = "HD2OL";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2r: hd2r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp UP_ARROW &kp DOWN &kp RIGHT &kp LEFT &kp UP_ARROW>;
+
+            label = "HD2R";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2e5k: hd2e5k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp UP_ARROW &kp RIGHT &kp DOWN &kp DOWN &kp DOWN>;
+
+            label = "HD2E5K";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2ea: hd2ea {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp UP_ARROW &kp RIGHT &kp DOWN &kp RIGHT>;
+
+            label = "HD2EA";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2sg: hd2sg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp DOWN &kp UP &kp LEFT &kp RIGHT &kp LEFT &kp RIGHT>;
+
+            label = "HD2QS";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2qs: hd2qs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp DOWN &kp DOWN &kp UP &kp LEFT &kp RIGHT>;
+
+            label = "HD2SG";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+
+        hd2ms: hd2ms {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp DOWN &kp UP &kp RIGHT &kp RIGHT &kp DOWN>;
+
+            label = "HD2MS";
+            wait-ms = <80>;
+            tap-ms = <40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -168,10 +290,10 @@
 
         Helldiver {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans     &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &hd2r     &kp UP    &hd2ol     &hd2e5k  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &hd2gd  &kp LEFT  &kp DOWN  &kp RIGHT  &hd2ea   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &hd2sg  &hd2qs    &hd2ms    &trans     &trans   &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans
             >;
         };
