@@ -19,10 +19,10 @@
 ---
 include:
   - board: nice_nano@2.0.0 
-    shield: sofle_left nice_view_adapter nice_view
+    shield: sofle_left nice_view_adapter nice_epaper
     snippet: studio-rpc-usb-uart
   - board: nice_nano@2.0.0 
-    shield: sofle_right nice_view_adapter nice_view
+    shield: sofle_right nice_view_adapter nice_epaper
   - board: nice_nano@2.0.0
     shield: sofle_left
     snippet: studio-rpc-usb-uart
